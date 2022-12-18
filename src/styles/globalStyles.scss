@@ -1,0 +1,46 @@
+/* Estamos normalizando o CSS. */
+@import-normalize;
+
+/* Estamos importando o arquivo de variáveis. */
+@import "./variables";
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: linear-gradient($azul-escuro, $azul-claro);
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    width: 3px;
+  }
+  body::-webkit-scrollbar-track {
+    background: linear-gradient(#041833, #154580);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #154580;
+    border-radius: 20px;
+  }
+
+  /* Essa propriedade CSS surgiu para que os desenvolvedores utilizassem fontes que não são livres, ou seja, que não estão na web. */
+@font-face {
+    font-family: "GandhiSansRegular";
+    src: local("GandhiSansRegular"),
+    url("../assets/fonts/GandhiSans-Regular.otf") format("truetype");
+    font-weight: 500;
+    
+    /* Essa propriedade faz que a fonte seja carregada de uma forma otimizada pelo navegador, dessa forma, quando recarregamos esse arquivo, ele não perde o estilo de fonte que está sendo aplicado nele. */
+    font-display: swap;
+}  
+
+@font-face {
+    font-family: "GandhiSansBold";
+    src: local("GandhiSansBold"),
+    url("../assets/fonts/GandhiSans-Bold.otf") format("truetype");
+    font-weight: 700;
+
+    /* Essa propriedade faz que a fonte seja carregada de uma forma otimizada pelo navegador, dessa forma, quando recarregamos esse arquivo, ele não perde o estilo de fonte que está sendo aplicado nele. */
+    font-display: swap;
+}  
+  
